@@ -1,0 +1,54 @@
+{
+  "activityId": 2202,
+  "sceneTemplate": "sampleGame",
+  "questionSource": "Embedded",
+  "globals": {
+    "questionCount": 10,
+    "bgImage": "res/assets/sampleGame/images/individual/background.jpg",
+    "bgAudio": "res/assets/sampleGame/audio/common/background/wind.mp3",
+    "propertyLists": ["res/assets/sampleGame/images/sprites/subTheme2/sprites-1.plist"],
+    "resourceTemplate": "subTheme2"
+  },
+  "embeddedQuestions": [
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    },
+    {
+      "correctAnswer": [],
+      "distractors": []
+    }
+  ]
+}

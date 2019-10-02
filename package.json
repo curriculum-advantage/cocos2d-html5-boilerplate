@@ -1,0 +1,194 @@
+{
+  "name": "cocos2d-html5-boilerplate",
+  "description": "A foundation for using cocos2d-html5 with Webpack.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Curriculum Advantage",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curriculum-advantage/cocos2d-html5-boilerplate"
+  },
+  "scripts": {
+    "lint": "cross-env eslint src",
+    "test": "cross-env jest --passWithNoTests",
+    "test:watch": "cross-env jest --passWithNoTests --watch --notify",
+    "test:coverage": "cross-env jest --coverage",
+    "config": "cross-env webpack --config tools/webpack/webpack.config.js",
+    "bundle": "cross-env npm run config -- --mode production",
+    "bundle:watch": "cross-env npm run config -- --mode development --watch --progress --display-error-details",
+    "compile": "cross-env cocos compile",
+    "start": "cross-env cocos run",
+    "dev": "cross-env npm run bundle:watch & npm run start",
+    "refresh": "cross-env npm run compile && npm run start",
+    "release": "cross-env cocos run -m release"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix src/",
+      "jest --bail --findRelatedTests",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@curriculum-advantage/coconut": "^1.0.2",
+    "core-js": "^2.6.9",
+    "howler": "^2.1.2",
+    "lodash": "^4.17.15",
+    "prando": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.2",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
+    "cross-env": "^6.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-unicorn": "^12.0.1",
+    "husky": "^3.0.7",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.0",
+    "lodash-webpack-plugin": "^0.11.5",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "eslint-comments",
+      "jest",
+      "promise",
+      "unicorn"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:eslint-comments/recommended",
+      "plugin:jest/recommended",
+      "plugin:promise/recommended",
+      "plugin:unicorn/recommended"
+    ],
+    "globals": {
+      "cc": true,
+      "ccui": true
+    },
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "func-names": [
+        "error",
+        "as-needed"
+      ],
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error",
+            "assert"
+          ]
+        }
+      ],
+      "complexity": [
+        "error",
+        5
+      ],
+      "max-params": [
+        "error",
+        5
+      ],
+      "max-depth": [
+        "error",
+        4
+      ],
+      "max-statements": [
+        "error",
+        20
+      ],
+      "max-lines-per-function": [
+        "error",
+        50
+      ],
+      "max-classes-per-file": [
+        "error",
+        1
+      ],
+      "max-nested-callbacks": [
+        "error",
+        3
+      ],
+      "max-statements-per-line": [
+        "error",
+        {
+          "max": 1
+        }
+      ],
+      "unicorn/filename-case": [
+        "error",
+        {
+          "cases": {
+            "camelCase": true,
+            "pascalCase": true
+          }
+        }
+      ],
+      "unicorn/expiring-todo-comments": "off"
+    }
+  },
+  "jest": {
+    "bail": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|cur)$": "<rootDir>/src/lib/mocks/FileMock.js"
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage",
+          "corejs": 2,
+          "targets": {
+            "ie": "11"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 100
+  }
+}

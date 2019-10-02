@@ -1,0 +1,14 @@
+# Build files
+dist/
+publish/
+
+# Dependencies
+node_modules/
+
+# IntelliJ
+.DS_Store
+.idea
+
+# VSCode
+.vscode/
+.history/
