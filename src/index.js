@@ -1,3 +1,5 @@
+import 'core-js';
+
 import { log, getParameterByName, setGlobals } from '@curriculum-advantage/coconut';
 import {
   getQuestionSource,
