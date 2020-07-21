@@ -40,8 +40,11 @@
     "@curriculum-advantage/coconut": "^1.0.2",
     "core-js": "^2.6.9",
     "howler": "^2.1.2",
+    "kind-of": ">=6.0.3",
     "lodash": "^4.17.19",
-    "prando": "^5.1.0"
+    "minimist": ">=1.2.3",
+    "prando": "^5.1.0",
+    "serialize-javascript": ">=2.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
