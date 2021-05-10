@@ -41,7 +41,7 @@
     "core-js": "^2.6.9",
     "howler": "^2.1.2",
     "kind-of": ">=6.0.3",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "minimist": ">=1.2.3",
     "prando": "^5.1.0",
     "serialize-javascript": ">=2.1.1"
