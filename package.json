@@ -42,7 +42,7 @@
     "howler": "^2.1.2",
     "kind-of": ">=6.0.3",
     "lodash": "^4.17.19",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "prando": "^5.1.0",
     "serialize-javascript": ">=2.1.1"
   },
